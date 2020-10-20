@@ -1,4 +1,11 @@
 #!/bin/bash
+#
+# Basic demo of functions, conditions, variables, reading input, printing output, and input validation
+# Written by: John Rogers
+# 10/19/2020
+#
+# Permission is granted for free use under the GPL 
+#
 
 # Declare variables
 message=""
