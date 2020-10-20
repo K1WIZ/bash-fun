@@ -16,28 +16,35 @@ isOld=""
 
 # Functions to call
 showMessage() {
+# We print text to the screen and use variable substitution to insert the info we collected.
 echo "Hi" $fname $lname "because you said your age is: " $age"..." $isOld;
 }
 
 first() {
+# We print a screen prompt using echo and then take (read in) user input to the variable fname.
 echo "what is your first name? ";
 read fname
 }
 
 last() {
+# We print a screen prompt using echo and then take (read in) user input to the variable lname.
 echo "what is your last name? ";
 read lname
 }
 
 getAge() {
+# Here we show how to combine generating the prompt for age and also reading in the user input on one line.
 read -r -p "Please tell me your age? " age
+# We test the user input to make sure it is an integer value, and within a valid range.  If not, 
+# we continue prompting until valid values are entered by the user.
 while [[ ! $age =~ ^[0-9]{1,3}$ ]] ; do
   read -r -p "Sorry... age can only be a number within 3 digits.  Please tell me your age? " age;
 done
 }
 
 oldOrNot() { 
-
+# We can generate different responses depending on the value of the age.  If the age value falls within
+# a range, we print the response for that range.  The case structure alllows us to compare the input.
 case $age in
 
   [0-9]) 
@@ -63,4 +70,5 @@ last
 getAge
 oldOrNot
 showMessage
-exit 0;
+# We make a clean exit
+exit 0;   
