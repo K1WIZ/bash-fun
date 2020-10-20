@@ -31,7 +31,6 @@ read lname
 
 getAge() {
 read -r -p "Please tell me your age? " age
-#while [[ $age != +([0-9]) ]] ; do
 while [[ ! $age =~ ^[0-9]{1,3}$ ]] ; do
   read -r -p "Sorry... age can only be a number within 3 digits.  Please tell me your age? " age;
 done
