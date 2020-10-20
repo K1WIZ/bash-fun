@@ -14,7 +14,7 @@ fname=""
 lname=""
 isOld=""
 
-# Functions to call
+# Who Ya Gonna Call?   (functions to call)
 showMessage() {
 # We print text to the screen and use variable substitution to insert the info we collected.
 echo "Hi" $fname $lname "because you said your age is: " $age"..." $isOld;
